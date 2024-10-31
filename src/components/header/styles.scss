@@ -1,0 +1,54 @@
+.container {
+  background-color: #fff;
+
+  .header-center {
+    background-color: #fff;
+  }
+  .header-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 180px;
+  }
+  .header-left {
+    margin-left: 200px;
+  }
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .ant-menu-horizontal > .ant-menu-item-selected {
+    color: #ff6f61; // Change text color of the selected item
+    background-color: #fff; // Optional: Change the background color of the selected item
+  }
+
+  .ant-menu-horizontal > .ant-menu-item:hover,
+  .ant-menu-horizontal > .ant-menu-item-active {
+    color: #ff6f61; // Change the hover/active text color
+    background-color: #f0f0f0; // Change the hover/active background color
+  }
+
+  .ant-menu-horizontal > .ant-menu-item-selected::after {
+    border-bottom-width: 0px; // Remove the bottom border
+    border-bottom-color: #fff; // Set the border color (though the width is 0, so this won't be visible)
+  }
+  .ant-menu-horizontal > .ant-menu-item:hover {
+    border-bottom-width: 0px; // Remove the bottom border
+    border-bottom-color: #fff; // Set the border color (though the width is 0, so this won't be visible)
+  }
+}

@@ -1,0 +1,56 @@
+.banner {
+  max-width: 1920px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  // Responsive container resizing
+  @media (max-width: 768px) {
+    height: 240px;
+  }
+
+  @media (max-width: 480px) {
+    height: 160px;
+  }
+
+  &__title {
+    font-family: "Spectral", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 81.5px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #ffffff;
+    white-space: nowrap;
+    transform: translateX(100%);
+    animation: slideIn 1s forwards;
+    transition: all 0.3s ease;
+
+    // Smooth resizing for responsiveness
+    @media (max-width: 768px) {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+      line-height: 36.53px;
+    }
+  }
+
+  // Keyframes for title animation
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}

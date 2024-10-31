@@ -1,0 +1,50 @@
+.footer-container {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .logo-section {
+    max-width: 297px;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 24px;
+  }
+
+  .right-section {
+    max-width: 568px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .item-container {
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      .title-section {
+        margin-bottom: 32px;
+        .title {
+          font-family: Spectral;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24.35px;
+          text-align: left;
+          color: #999999;
+        }
+      }
+      .data-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .data-item {
+          cursor: pointer;
+          margin-bottom: 24px;
+          font-family: Roboto;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+          letter-spacing: 0.05em;
+          color: #2d2d2a;
+        }
+      }
+    }
+  }
+}

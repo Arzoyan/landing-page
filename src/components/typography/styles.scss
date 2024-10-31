@@ -1,0 +1,14 @@
+.main {
+  all: unset; /* Remove all styles (including padding, margin, etc.) */
+  box-sizing: border-box; /* Use border-box to prevent content overflow due to padding */
+  margin: 0;
+  padding: 0;
+}
+
+.main .main-title {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 105px;
+  align-items: center;
+  color: #ea2636;
+}

@@ -1,0 +1,36 @@
+.title-container {
+  .title-text {
+    font-family: "Spectral";
+    font-size: 70px; // Initial font size
+    font-weight: 600;
+    line-height: 105px;
+    color: #ea2636;
+    margin: 0; // Remove default margin
+    display: inline-block; // Make it inline-block for proper underline positioning
+
+    // Smoothly transition to smaller sizes
+    @media (max-width: 768px) {
+      font-size: 24px; // Final font size for smaller screens
+      line-height: 36px;
+    }
+  }
+
+  .underline {
+    margin-top: 24px; // Spacing between text and underline
+    height: 2px; // Underline height
+    background-color: #ea2636; // Underline color
+    display: inline-block; // Align underline with text
+
+    &.left {
+      width: 50%; // Width for left underline
+      align-self: flex-start; // Align left
+      position: relative; // Position relative for the effect
+      left: 0; // Align to the left edge of the title
+    }
+
+    &.center {
+      width: 50%; // Width for center underline
+      margin: 0 auto; // Center the underline
+    }
+  }
+}

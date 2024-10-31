@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #ea2636; /* Text color */
+  background: #ffffff; /* Button background */
+  border: 2px solid #ea2636; /* Border color */
+  box-shadow: none; /* No shadow initially */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.cta:hover {
+  box-shadow: 6px 6px 0 #ea2636; /* Shadow color */
+  transform: scaleX(1.1); /* Slight increase in width on hover */
+}
+
+.text {
+  flex: 0 0 auto; /* Fixed size for the left side */
+  margin-right: 10px;
+  color: #ea2636;
+}
+
+.arrow-wrapper {
+  display: inline-flex;
+  align-items: center;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.cta:hover .arrow-wrapper {
+  width: 24px; /* Expand to show the arrow */
+  opacity: 1; /* Arrow becomes visible on hover */
+  margin-left: 5px; /* Add slight spacing */
+}

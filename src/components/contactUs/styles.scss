@@ -1,0 +1,174 @@
+.about-us {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  transition: padding 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
+
+  &__container {
+    display: flex;
+    max-width: 1920px;
+    width: 100%;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left,
+  &__right {
+    padding: 60px;
+    transition: padding 0.3s ease;
+
+    @media (max-width: 768px) {
+      padding: 24px;
+    }
+  }
+
+  &__left {
+    flex: 1;
+    background-color: #2d2d2a;
+    color: #fff;
+
+    &__title {
+      font-family: Spectral;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 42.62px;
+      text-align: left;
+    }
+
+    &__subtitle {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+
+      margin-bottom: 113px;
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        span {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 18.75px;
+          text-align: left;
+        }
+      }
+
+      .about-us__icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__right {
+    flex: 1;
+    background-color: #ffffff;
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      &__row {
+        display: flex;
+        gap: 24px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+
+      &__input-group,
+      &__textarea-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        label {
+          color: #ccc;
+          font-weight: bold;
+          margin-bottom: 4px;
+          transition: color 0.3s;
+        }
+
+        input,
+        textarea {
+          border: none;
+          border-bottom: 1px solid #ccc;
+          padding: 8px;
+          outline: none;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: red;
+
+            & + label {
+              color: red;
+            }
+          }
+        }
+
+        textarea {
+          resize: none;
+          margin-bottom: 32px;
+        }
+      }
+
+      &__radio-group {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+        label {
+          font-family: Roboto;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left;
+
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          input[type="radio"] {
+            accent-color: red;
+          }
+        }
+      }
+    }
+
+    &__submit {
+      background-color: red;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darkred;
+      }
+    }
+  }
+}

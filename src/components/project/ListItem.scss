@@ -1,0 +1,118 @@
+.list-item {
+  display: flex;
+  align-items: center;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Center items
+    width: 100%;
+  }
+
+  &__item {
+    padding: 51px 24px;
+    background-color: #f5f5f5;
+    margin: 28px 12px; // Adjusted for better spacing
+    flex: 1 1 calc(33.333% - 24px); // Each item takes up 1/3 of the row width, accounting for margins
+    box-sizing: border-box; // Include padding and border in the width and height
+
+    // Animation classes
+    &.animate {
+      animation: fadeIn 0.5s ease-in-out;
+
+      .list-item__title {
+        animation: titleSlideUp 0.7s ease-in-out forwards;
+      }
+
+      .list-item__description {
+        animation: descriptionSlideDown 0.7s ease-in-out forwards;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Spectral", serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60.88px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: #ea2636;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+
+      li {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        color: #000000;
+      }
+    }
+  }
+
+  &__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 10px;
+
+    &:hover {
+      color: #ea2636; // Change color on hover
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    margin-top: 16px;
+
+    &-icon {
+      margin: 0 8px;
+    }
+  }
+
+  @keyframes titleSlideUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes descriptionSlideDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 640px) {
+    &__item {
+      flex: 1 1 100%; // Stack items in one column
+      margin: 28px 0; // Adjust margin for stacked items
+    }
+  }
+}

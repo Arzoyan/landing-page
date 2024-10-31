@@ -1,0 +1,85 @@
+// .OurApproach-container {
+//   // Set maximum width for the whole container, if needed
+//   max-width: 1200px; // You can adjust this as necessary
+//   margin: 0 auto; // Center the container
+// }
+
+.OurApproach-container {
+  padding: 145px 120px; // Default padding for larger screens
+  display: flex;
+  gap: 163px;
+  flex-wrap: wrap;
+
+  .home-cart-container,
+  .carousel-container {
+    flex: 1;
+  }
+
+  // Adjust padding on smaller screens
+  @media (max-width: 1200px) {
+    padding: 100px 80px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 60px 40px; // Reduce padding for mobile devices
+    gap: 20px; // Adjust gap as needed for smaller screens
+    align-items: center;
+    justify-content: center;
+  } // Allows items to wrap when screen size reduces
+}
+
+.content-container {
+  display: flex; // Use flexbox for layout
+  justify-content: space-between; // Space out the child divs
+  padding: 120px 145px; // Initial padding
+  gap: 163px; // Distance between the two divs
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack divs in column layout on smaller screens
+    padding: 24px; // Reduce padding for smaller screens
+    gap: 24px; // Adjust gap for column layout
+  }
+}
+
+.home-cart-container {
+  flex: 1; // Allow the HomeCart to grow and shrink
+  max-width: 50%; // Each div takes up 50% of the width in row layout
+  box-sizing: border-box; // Include padding and border in width calculation
+
+  .title {
+    color: #ea2636;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 105px;
+    margin-bottom: 24px;
+    font-family: "Spectral";
+  }
+
+  .underline {
+    border-bottom: 1px solid #ea2636;
+    width: 15%;
+    height: 2px;
+  }
+
+  .description {
+    font-size: 18px;
+    color: #2d2d2a;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Roboto";
+    margin-top: 40px;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+}
+
+.carousel-container {
+  flex: 1; // Allow the MainCarousel to grow and shrink
+  max-width: 50%; // Each div takes up 50% of the width in row layout
+  box-sizing: border-box; // Include padding and border in width calculation
+
+  // Add any specific styles for MainCarousel if needed
+}
