@@ -1,13 +1,9 @@
 .services-we-offer-container {
-  padding: 100px 120px;
+  padding: 5vw 6vw;
   background-color: #f5f5f5;
 
-  @media (max-width: 1200px) {
-    padding: 100px 80px;
-  }
-
   @media (max-width: 768px) {
-    padding: 60px 40px; // Reduce padding for mobile devices
+    padding: 20px 15px; // Reduce padding for mobile devices
   }
 
   .title {
@@ -23,7 +19,7 @@
 
   .data-section {
     gap: 61px;
-    margin-top: 80px;
+    margin-top: 4vw;
     display: flex;
     .img {
       width: 50%;
@@ -34,11 +30,13 @@
     .collapse {
       width: 50%;
     }
-    @media (max-width: 460px) {
+    @media (max-width: 768px) {
+      margin-top: 0vw;
       box-sizing: border-box;
       padding: 24px;
-      align-items: center;
-      justify-content: center;
+      .collapse {
+        width: 100%;
+      }
       .img {
         display: none;
       }

@@ -1,4 +1,5 @@
 import Advantages from "../advantages/Advantages";
+import AdvantagesMobile from "../advantages/AdvantagesMobile";
 import Banner from "../bunner/Bunner";
 import OurApproach from "../ourApproach/OurApproach";
 import ServicesWeOffer from "../servicesWeOffer/ServicesWeOffer";
@@ -8,9 +9,7 @@ const AboutAs = () => {
   return (
     <div>
       <Banner title={"About Us"} imgUrl={"/images/about-us.png"} />
-      <div style={{ display: "flex", maxHeight: "650px", maxWidth: "" }}>
-        <OurApproach />
-      </div>
+      <OurApproach />
       <div>
         <ServicesWeOffer dataCount={5} />
       </div>
@@ -19,6 +18,7 @@ const AboutAs = () => {
       </div>
       <div>
         <Advantages />
+        <AdvantagesMobile />
       </div>
     </div>
   );

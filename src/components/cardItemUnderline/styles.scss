@@ -1,13 +1,17 @@
 .CardItemUnderline-container {
+  padding: 6vw 8vw;
   .description-container {
     max-width: 800px;
     width: 100%;
-    margin: 80px auto;
+    margin: 8vw auto;
+    @media (max-width: 7680px) {
+      margin: 4vw auto;
+    }
     .description {
       font-family: Roboto;
-      font-size: 24px;
+      font-size: clamp(14px, 2vw, 24px);
       font-weight: 400;
-      line-height: 40px;
+      line-height: clamp(14px, 5vw, 40px);
       text-align: left;
       color: #2d2d2a;
     }

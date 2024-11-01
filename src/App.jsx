@@ -43,20 +43,11 @@ function App() {
             <MainFooter />
           </div>
           <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              borderTop: "1px solid #999",
-              paddingTop: "40px",
-            }}
+           className="footer-bottom"
           >
             <div>© 2023 UAE INTERNATIONAL INVESTMENTS</div>
             <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "100px",
-              }}
+              className="footer-bottom-right"
             >
               <h5>Phishing and Fraud Awareness</h5>
               <h5>Legal</h5>

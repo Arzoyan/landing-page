@@ -1,36 +1,45 @@
 .title-container {
   .title-text {
     font-family: "Spectral";
-    font-size: 70px; // Initial font size
+    font-size: clamp(24px, 6vw, 70px);
     font-weight: 600;
-    line-height: 105px;
     color: #ea2636;
-    margin: 0; // Remove default margin
-    display: inline-block; // Make it inline-block for proper underline positioning
+    margin: 0;
+    display: inline-block;
 
-    // Smoothly transition to smaller sizes
     @media (max-width: 768px) {
-      font-size: 24px; // Final font size for smaller screens
+      font-size: 24px;
       line-height: 36px;
     }
   }
 
   .underline {
-    margin-top: 24px; // Spacing between text and underline
-    height: 2px; // Underline height
-    background-color: #ea2636; // Underline color
-    display: inline-block; // Align underline with text
+    margin-top: 24px;
+    height: 2px;
+    background-color: #ea2636;
+    display: inline-block;
 
     &.left {
-      width: 50%; // Width for left underline
-      align-self: flex-start; // Align left
-      position: relative; // Position relative for the effect
-      left: 0; // Align to the left edge of the title
+      width: 50%;
+      align-self: flex-start;
+      position: relative;
+      left: 0;
+      @media (max-width: 768px) {
+        width: 15%;
+      }
     }
 
     &.center {
-      width: 50%; // Width for center underline
-      margin: 0 auto; // Center the underline
+      width: 50%;
+      margin: 0 auto;
+      @media (max-width: 768px) {
+        width: 15%;
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 }

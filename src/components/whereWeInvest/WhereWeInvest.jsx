@@ -12,8 +12,17 @@ const WhereWeInvest = () => {
           Markets.
         </section>
       </div>
-      <div>
-        <img src="/images/Map.png" />
+      <div
+        style={{
+          backgroundImage: `url(./images/Map.png)`,
+          overflow: "auto",
+          width: "100%",
+          height: "50vw",
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
       </div>
     </div>
   );

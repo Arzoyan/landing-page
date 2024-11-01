@@ -50,6 +50,9 @@
       text-align: left;
 
       margin-bottom: 113px;
+      @media (max-width: 768px) {
+        margin-bottom: 24px;
+      }
     }
 
     &__contact {
@@ -130,7 +133,15 @@
           margin-bottom: 32px;
         }
       }
-
+      &__radio-title {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+        color: #2d2d2a;
+        width: 100%;
+      }
       &__radio-group {
         display: flex;
         gap: 24px;

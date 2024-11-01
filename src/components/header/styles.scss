@@ -1,24 +1,127 @@
+// .container {
+//   background-color: #fff;
+
+//   .header-center {
+//     background-color: #fff;
+//     width: 100%;
+//   }
+//   .header-container {
+//     display: flex;
+//     align-items: center;
+//     gap: 14vw;
+//     .ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after {
+//       border-bottom: none;
+//     }
+//     /* Media query for mobile view */
+//     @media (max-width: 640px) {
+//       gap: 0;
+//       margin: 0;
+//       justify-content: space-between;
+//       .header-left {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+//   .header-left {
+//     margin-left: 15vw;
+//   }
+//   .header-right {
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+
+//   .logo {
+//     width: 200px;
+//     height: 50px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     overflow: hidden;
+//     svg {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: contain;
+//     }
+//   }
+//   .ant-menu-horizontal {
+//     border-bottom: 0;
+//   }
+//   .ant-menu-horizontal > .ant-menu-item-selected {
+//     color: #ff6f61; // Change text color of the selected item
+//     background-color: #fff; // Optional: Change the background color of the selected item
+//   }
+
+//   .ant-menu-horizontal > .ant-menu-item:hover,
+//   .ant-menu-horizontal > .ant-menu-item-active {
+//     color: #ff6f61; // Change the hover/active text color
+//     background-color: #f0f0f0; // Change the hover/active background color
+//   }
+
+//   .ant-menu-horizontal > .ant-menu-item-selected::after {
+//     border-bottom-width: 0px; // Remove the bottom border
+//     border-bottom-color: #fff; // Set the border color (though the width is 0, so this won't be visible)
+//   }
+//   .ant-menu-horizontal > .ant-menu-item:hover {
+//     border-bottom-width: 0px; // Remove the bottom border
+//     border-bottom-color: #fff; // Set the border color (though the width is 0, so this won't be visible)
+//   }
+// }
+
+// @media (max-width: 900px) {
+//   .header-center {
+//     display: none;
+//   }
+// }
+// @media (min-width: 900px) {
+//   .burger-menu {
+//     display: none;
+//   }
+// }
+
 .container {
   background-color: #fff;
-
+  height: 96px;
   .header-center {
     background-color: #fff;
+    width: 100%;
   }
+
   .header-container {
-    margin-top: 15px;
     display: flex;
     align-items: center;
-    gap: 180px;
+    gap: 14vw;
+    margin-top: 24px;
+    .ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after {
+      border-bottom: none;
+    }
+    @media (max-width: 780px) {
+      // gap: 0;
+      // margin: 0;
+      justify-content: space-between;
+      justify-content: space-between;
+      // .header-left {
+      //   margin-left: 0;
+      // }
+    }
+    @media (max-width: 640px) {
+      // gap: 0;
+      margin: 0;
+      // justify-content: space-between;
+      // justify-content: space-between;
+      // .header-left {
+      //   margin-left: 0;
+      // }
+    }
   }
   .header-left {
-    margin-left: 200px;
+    margin-left: 15vw;
   }
   .header-right {
     display: flex;
     justify-content: flex-end;
   }
-
   .logo {
+    margin-top: 24px;
     width: 200px;
     height: 50px;
     display: flex;
@@ -31,7 +134,9 @@
       object-fit: contain;
     }
   }
-
+  .ant-menu-horizontal {
+    border-bottom: 0;
+  }
   .ant-menu-horizontal > .ant-menu-item-selected {
     color: #ff6f61; // Change text color of the selected item
     background-color: #fff; // Optional: Change the background color of the selected item
@@ -50,5 +155,69 @@
   .ant-menu-horizontal > .ant-menu-item:hover {
     border-bottom-width: 0px; // Remove the bottom border
     border-bottom-color: #fff; // Set the border color (though the width is 0, so this won't be visible)
+  }
+
+  @media (max-width: 768px) {
+    .header-center {
+      display: none;
+    }
+    .burger-menu {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  @media (min-width: 768px) {
+    .header-center {
+      display: block;
+    }
+    .burger-menu {
+      display: none;
+    }
+  }
+}
+
+/* Popup Styles */
+.mobile-popup {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease-in-out;
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    gap: 20px;
+    margin-top: 60px;
+    .mobile-nav-item {
+      font-size: 24px;
+      font-weight: 500;
+      color: #2d2d2a;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &.active,
+      &:hover {
+        color: #ea2636;
+      }
+    }
+  }
+}
+
+/* Animation for popup appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

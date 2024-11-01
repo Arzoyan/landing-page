@@ -16,7 +16,7 @@ const HomePage = () => {
         </video>
         <BannerItem />
       </div>
-      <div style={{ display: "flex", maxHeight: "650px", marginTop: "100px" }}>
+      <div>
         <OurApproach />
       </div>
       <div>

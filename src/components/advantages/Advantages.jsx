@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-const DATA_ITEMS = [
+export const DATA_ITEMS = [
   {
     title: "Expertise",
     description: `Our team consists of highly skilled professionals with diverse backgrounds in finance,

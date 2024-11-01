@@ -15,6 +15,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     .item-container {
       margin-right: 20px;
       display: flex;
@@ -45,6 +46,11 @@
           color: #2d2d2a;
         }
       }
+    }
+  }
+  @media (max-width: 460px) {
+    .right-section {
+      justify-content: start;
     }
   }
 }

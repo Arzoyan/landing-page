@@ -18,15 +18,16 @@
   // Adjust padding on smaller screens
   @media (max-width: 1200px) {
     padding: 100px 80px;
+    gap: 83px;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding: 60px 40px; // Reduce padding for mobile devices
-    gap: 20px; // Adjust gap as needed for smaller screens
+    padding: 3vw 2vw;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-  } // Allows items to wrap when screen size reduces
+  }
 }
 
 .content-container {
@@ -51,7 +52,7 @@
     color: #ea2636;
     font-weight: 600;
     font-size: 70px;
-    line-height: 105px;
+    // line-height: 105px;
     margin-bottom: 24px;
     font-family: "Spectral";
   }
@@ -74,12 +75,21 @@
   .button {
     margin-top: 40px;
   }
+  @media (max-width: 768px) {
+    max-width: 70%;
+  }
+
+  @media (max-width: 460px) {
+    max-width: 90%;
+  }
 }
 
 .carousel-container {
   flex: 1; // Allow the MainCarousel to grow and shrink
   max-width: 50%; // Each div takes up 50% of the width in row layout
   box-sizing: border-box; // Include padding and border in width calculation
-
+  @media (max-width: 768px) {
+    max-width: 70%;
+  }
   // Add any specific styles for MainCarousel if needed
 }

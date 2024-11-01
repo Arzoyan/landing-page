@@ -67,8 +67,10 @@ const ContactUsPage = () => {
               </div>
             </div>
 
-            {/* Subject (Radio Buttons) */}
             <div className="about-us__right__form__radio-group">
+              <h2 className="about-us__right__form__radio-title">
+                Select Subject?
+              </h2>
               <label>
                 <input type="radio" name="subject" required />
                 General Inquiry
@@ -87,16 +89,12 @@ const ContactUsPage = () => {
               </label>
             </div>
 
-            {/* Message Text Area */}
             <div className="about-us__right__form__textarea-group">
               <label>Message</label>
               <textarea required rows="4"></textarea>
             </div>
 
-            {/* Submit Button */}
-            {/* <div className="about-us__right__submit"> */}
             <MyButton title="send message" />
-            {/* </div> */}
           </form>
         </div>
       </div>

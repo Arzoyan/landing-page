@@ -16,7 +16,8 @@
 .collapse-img {
   display: none;
 
-  @media (max-width: 460px) {
+  @media (max-width: 600px) {
     display: block;
+    width: 100% !important;
   }
 }

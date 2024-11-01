@@ -35,4 +35,20 @@
       margin: 6px;
     }
   }
+  @media (max-width: 480px) {
+    width: 90%;
+    margin-top: 70px;
+    .title {
+      line-height: 0;
+    }
+    .OurMission-title {
+      margin-bottom: 24px;
+    }
+    .description-container {
+      margin-bottom: 24px;
+      .section {
+        margin-bottom: 24px;
+      }
+    }
+  }
 }
